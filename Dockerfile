@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y libqt4-gui hfsq
 
 VOLUME /var/lib/hfsql
 EXPOSE 4900
+EXPOSE 4999
 
 USER hfsql
 

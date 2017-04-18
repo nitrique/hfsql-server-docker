@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:jessie-slim
 
 ENV HFSQL_VERSION 22.0.036.c
 

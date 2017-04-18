@@ -12,7 +12,7 @@ RUN echo "deb http://package.windev.com/fr/debian/ debian main" > /etc/apt/sourc
 RUN apt-get update && apt-get install --no-install-recommends -y sudo unzip wget libiodbc2-dev iodbc libqt4-gui hfsql="${HFSQL_VERSION}" && rm -rf /var/lib/apt/lists/* && apt-get autoremove -y
 
 # Install ODBC
-RUN mkdir /opt/wdhfo (wxpackodbclinux64)
+RUN mkdir /opt/wdhfo
 WORKDIR /tmp
 RUN wget https://www.pcsoft.fr/st/telec/22/telechargement.php?PACK="${WINDEV_PACK}"/fr/"${WINDEV_RELEASE}".exe
 RUN unzip ./"${WINDEV_RELEASE}".exe "INSTALL/ODBC/wxpackodbclinux64.zip"

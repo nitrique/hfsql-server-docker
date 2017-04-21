@@ -5,8 +5,6 @@ ENV ACCESS_PORT 4900
 ENV MANTA_PORT 4999
 ENV DEBUG_PORT 27281
 
-USER hfsql
-
 # import public key "PCSOFT <network@pcsoft.fr>"
 RUN apt-key adv --keyserver hkp://pgp.mit.edu/ --recv-keys 3a2b08fb11ba9bca
 
@@ -23,6 +21,7 @@ RUN echo "Enabled=1" >> /opt/hfsql/HFConf.ini
 
 VOLUME /var/lib/hfsql
 
+USER hfsql
 EXPOSE ${ACCESS_PORT}
 EXPOSE ${MANTA_PORT}
 EXPOSE ${DEBUG_PORT}

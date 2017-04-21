@@ -1,6 +1,6 @@
 FROM debian:jessie-slim
 
-ENV HFSQL_VERSION 22.0.036.c
+ENV HFSQL_VERSION 22.0.052.b
 
 # import public key "PCSOFT <network@pcsoft.fr>"
 RUN apt-key adv --keyserver hkp://pgp.mit.edu/ --recv-keys 3a2b08fb11ba9bca
